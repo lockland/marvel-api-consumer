@@ -9,7 +9,12 @@ use DI\ContainerBuilder;
 use App\Controller\HomeController;
 use Symfony\Component\Dotenv\Dotenv;
 
-(new Dotenv())->usePutenv()->load(__DIR__.'/../.env', __DIR__.'/../.env.dev');
+$dotenv = new Dotenv();
+$dotenv->usePutenv()->load(__DIR__.'/../.env');
+
+if (file_exists(__DIR__.'/../.env.dev')) {
+    $dotenv->usePutenv()->load(__DIR__.'/../.env.dev');
+}
 
 $builder = new ContainerBuilder();
 $builder->addDefinitions(__DIR__ . '/../src/ContainerSettings.php');
