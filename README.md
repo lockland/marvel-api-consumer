@@ -28,3 +28,7 @@ Now lets run your server
 ```
 $ php -S 127.0.0.1:8000 -t public/
 ```
+
+If nothing went wrong you will see:
+
+![Homepage](https://github.com/lockland/marvel-api-consumer/blob/main/assets/print.png)
