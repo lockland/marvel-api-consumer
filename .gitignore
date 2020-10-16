@@ -1,0 +1,3 @@
+vendor/
+.env.dev
+tmp/cache/*

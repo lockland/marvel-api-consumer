@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title> Marvel Characters API</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #main {
+        width: 600px;
+        margin: 0px auto;
+      }
+
+      #header {
+        height: 8em;
+        background-color: black;
+        font: 20px sans-serif;
+        color: white;
+        position: relative;
+      }
+
+      #header div {
+        position: absolute;
+        top: 25%;
+        text-align: center;
+        width: 100%;
+      }
+
+      {% block style%} {% endblock %}
+    </style>
+    </head>
+    <body>
+      <div id="main">
+        <div id="header">
+          <div>
+            <h1> MARVEL</h1>
+            {% block header %}{% endblock %}
+          </div>
+        </div>
+        <div id="content">
+        {% block content %} {% endblock %}
+        </div>
+      </div>
+    </body>
+</html>

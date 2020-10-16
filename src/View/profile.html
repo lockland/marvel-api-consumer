@@ -1,0 +1,51 @@
+{% extends "main.html" %}
+
+
+{% block style %}
+
+img {
+  width: 40%;
+  margin: 5px;
+  float: left;
+}
+
+#details {
+  width: 55%;
+  padding: 5px;
+  margin-left: 43%;
+}
+
+#details ol {
+  margin-left: 1em;
+}
+
+#details * {
+  margin-bottom: 10px;
+}
+
+#profile {
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+{% endblock %}
+
+{% block header %}
+<h2>Character Profile</h2>
+{%endblock%}
+
+{% block content %}
+<div id="profile">
+  <img src="{{character.image}}"/>
+  <div id="details">
+    <h2>{{character.name}}</h2>
+    <p>{{character.description}}</p>
+    <h3>Stories List:</h3>
+    <ol>
+    {% for story in character.stories %}
+    <li>{{ story }}</li>
+    {% endfor%}
+    </ol>
+  </div>
+</div>
+{% endblock %}
