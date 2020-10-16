@@ -13,8 +13,7 @@ class MarvelStorage implements StorageInterface
 {
     private const FILE_PATH = __DIR__ . '/../../../tmp/cache/storage.json';
     private const API_URL = 'https://gateway.marvel.com/v1/public/characters?';
-    //private const FILE_MAX_AGE = 60 * 60 * 24;
-    private const FILE_MAX_AGE = 5;
+    private const FILE_MAX_AGE = 60 * 60 * 24;
 
     private $pub_key = '';
     private $priv_key = '';
